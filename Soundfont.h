@@ -16,7 +16,7 @@
 
 
 #if defined DIYINO_PRIME or defined DIYINO_STARDUST_V3
-  #define SOUNDFONT_QUANTITY 5
+  #define SOUNDFONT_QUANTITY 18
   #define NR_CONFIGFOLDERFILES 29
   #define NR_JUKEBOXSONGS 0
   #define NR_FILE_SF 30
@@ -94,7 +94,72 @@ void setID(uint16_t id) {
       // soundFont directory 05 :
       this->powerOnTime = 700;
       this->powerOffTime = 1500;
-      break;                                                                           
+      break;
+    case 5:
+      // soundFont directory 06 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 6:
+      // soundFont directory 07 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 7:
+      // soundFont directory 08 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 8:
+      // soundFont directory 09 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;     
+    case 9:
+      // soundFont directory 10 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 10:
+      // soundFont directory 11 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 11:
+      // soundFont directory 12 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 12:
+      // soundFont directory 13 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 13:
+      // soundFont directory 14 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 14:
+      // soundFont directory 15 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 15:
+      // soundFont directory 16 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 16:
+      // soundFont directory 17 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;
+    case 17:
+      // soundFont directory 18 :
+      this->powerOnTime = 700;
+      this->powerOffTime = 600;
+      break;                                                                              
   #else if DIYINO_STARDUST_V2
     default:
     case 0:
