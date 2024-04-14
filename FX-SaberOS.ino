@@ -1393,14 +1393,14 @@ void HumRelaunch() {
   hum_playing = true;
 }
 
-void SinglePlay_Sound(uint8_t track) {
+void SinglePlay_Sound(uint16_t track) {
   dfplayer.playPhysicalTrack(track);
 #ifdef DFPLAYER_CLONE
   dfplayer.setSingleLoop(false); // fixes incorrect looping of certain sounds on clone chips
 #endif
 }
 
-void LoopPlay_Sound(uint8_t track) {
+void LoopPlay_Sound(uint16_t track) {
   dfplayer.playSingleLoop(track);
 }
 

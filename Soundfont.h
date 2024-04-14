@@ -54,6 +54,7 @@ public:
 	}
 	;
 void setID(uint16_t id) {
+  /*
     uint16_t boot[2];
     uint16_t powerOn[2];
     uint16_t powerOff[2];
@@ -63,7 +64,7 @@ void setID(uint16_t id) {
     uint16_t lockup[2];
     uint16_t blaster[2];
     uint16_t menu[2];
-
+  */
     this->ID = id;
 
     switch (id) {
@@ -93,7 +94,7 @@ void setID(uint16_t id) {
       // soundFont directory 05 :
       this->powerOnTime = 700;
       this->powerOffTime = 1500;
-      break;
+      break;                                                                           
   #else if DIYINO_STARDUST_V2
     default:
     case 0:
@@ -164,39 +165,39 @@ void setID(uint16_t id) {
     
 	}
 
-	const uint8_t getBlaster(uint8_t offset = 0) {
+	const uint16_t getBlaster(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_BLASTER_OFFSET + random(0,SF_BLASTER_NR);
 	}
 
-	const uint8_t getBoot(uint8_t offset = 0) {
+	const uint16_t getBoot(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_BOOT_OFFSET;    
 	}
 
-	const uint8_t getClash(uint8_t offset = 0) {
+	const uint16_t getClash(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_CLASH_OFFSET + random(0,SF_CLASH_NR);
 	}
 
-	const uint8_t getHum(uint8_t offset = 0) {
+	const uint16_t getHum(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_HUM_OFFSET + random(0,SF_HUM_NR);
 	}
 
-	const uint8_t getLockup(uint8_t offset = 0) {
+	const uint16_t getLockup(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_LOCKUP_OFFSET + random(0,SF_LOCKUP_NR);
 	}
 
-	const uint8_t getPowerOff(uint8_t offset = 0) {
+	const uint16_t getPowerOff(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_POWEROFF_OFFSET + random(0,SF_POWEROFF_NR);
 	}
 
-	const uint8_t getPowerOn(uint8_t offset = 0) {
+	const uint16_t getPowerOn(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_POWERON_OFFSET + random(0,SF_POWERON_NR);
 	}
 
-	const uint8_t getSwing(uint8_t offset = 0) {
+	const uint16_t getSwing(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_SWING_OFFSET + random(0,SF_SWING_NR);
 	}
 
-  const uint8_t getMenu(uint8_t offset = 0) {
+  const uint16_t getMenu(uint16_t offset = 0) {
       return NR_CONFIGFOLDERFILES + NR_JUKEBOXSONGS + offset + SF_MENU_OFFSET;
   }
   

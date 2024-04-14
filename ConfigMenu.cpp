@@ -32,8 +32,8 @@ extern cRGB currentColor;
 extern cRGB color;
 #endif
 extern void HumRelaunch();
-extern void SinglePlay_Sound(uint8_t track);
-extern void LoopPlay_Sound(uint8_t track);
+extern void SinglePlay_Sound(uint16_t track);
+extern void LoopPlay_Sound(uint16_t track);
 extern void Pause_Sound();
 extern void Resume_Sound();
 extern void Set_Loop_Playback();

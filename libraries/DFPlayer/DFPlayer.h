@@ -325,7 +325,7 @@ public:
 		send();
 	}
 
-	inline void playSingleLoop(uint8_t track, uint8_t folder = 0) {
+	inline void playSingleLoop(uint16_t track, uint8_t folder = 0) {
 		setSendBuffer(PLAY_REPEAT, track, folder);
 		send();
 	}
