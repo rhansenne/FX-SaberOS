@@ -36,7 +36,7 @@
 // If your saber has only a single button to interact with the electronics, uncomment the next line
 // in case you have 2 buttons (referred to as main and aux buttons) leave this line commented out
 
-//#define SINGLEBUTTON
+#define SINGLEBUTTON
  
 #ifdef DIYINO_PRIME 
   #define MAIN_BUTTON     12
@@ -122,7 +122,7 @@
   
   #ifdef PIXELBLADE
     // How many leds in one strip?
-    #define NUMPIXELS 115  // can go up to 120, could lead to memory overflow if further increased, causing instability
+    #define NUMPIXELS 127  // can go up to 120, could lead to memory overflow if further increased, causing instability
     // For led chips like NEOPIXELs, which have a data line, ground, and power, you just
     // need to define DATA_PIN.
     #define DATA_PIN       13 // D13
@@ -195,7 +195,7 @@
  * Increase if you notice certain sounds not being played, but don't set too high or sounds and effects will become less responsive.
  */
 #ifdef DFPLAYER_CLONE
-  #define DFPLAYER_OPERATING_DELAY 125 //125 (ms)
+  #define DFPLAYER_OPERATING_DELAY 200 //125 (ms)
 #endif
 
 

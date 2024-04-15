@@ -71,13 +71,13 @@ It is important to note that this will take up some memory in proportion the the
  * or by polling the INT_STATUS register via I2C and determining the value (-> CLASH_DET_MPU_POLL)
  * of bit 6
  */
-#define CLASH_DET_MPU_INT
-//#define CLASH_DET_MPU_POLL
+//#define CLASH_DET_MPU_INT
+#define CLASH_DET_MPU_POLL
  
 /*
  * Uncomment to enable a very basic (hybrid) smooth swing type effect: modulate the hum in function of rotation speed when moving slower than a swing
  */
-//#define SMOOTH_SWING
+#define SMOOTH_SWING
 
 /* FX DURATIONS AND SUPRESS TIMES
  *  effects cannot be retriggered for the duration
@@ -95,7 +95,7 @@ It is important to note that this will take up some memory in proportion the the
  *  HUM_RELAUNCH will tell the state machine to relaunch
  *  hum sound after this time period elapses
  */
-#define HUM_RELAUNCH     2000
+#define HUM_RELAUNCH     25000
 
 /*
  * How long do the light effect last for the different FX's, choose to synchronize with the sound effect
@@ -107,7 +107,7 @@ It is important to note that this will take up some memory in proportion the the
   #define SMOOTH_SWING_FX_DURATION 250 //250 //minimal hum duration
 #endif
 // select if swing shall be triggered by change in blade orientation and rotation; otherwise swing is simply determined by blade acceleration
-//#define SWING_QUATERNION
+#define SWING_QUATERNION
 
 /*
  * BUTTONS PARAMETERS
@@ -141,7 +141,7 @@ It is important to note that this will take up some memory in proportion the the
  * If you a device with a CPU wich is not
  * an Atmega328 : COMMENT THIS
  *************************************/
-#define DEEP_SLEEP
+//#define DEEP_SLEEP
 #if defined DEEP_SLEEP
   #define SLEEPYTIME      (1000UL * 60 * 2) //2 mins, after which the board will automatically go to sleep mode (to be implemented)
   #include <avr/sleep.h>
@@ -166,7 +166,7 @@ It is important to note that this will take up some memory in proportion the the
  * Uncomment to enable a slight color change when performing a swing.
  * Some clash color is mixed into the main color while swinging.
  */
-//#define SWING_COLORCHANGE
+#define SWING_COLORCHANGE
 
 /*
  * Uncomment TIP_MELT to enable a "tip melt" (pixel blade only) effect. If PIXELBLADE, ANIBLADE and TIP_MELT are enabled, main button 
@@ -175,7 +175,7 @@ It is important to note that this will take up some memory in proportion the the
  * few seconds the tip color will gradually heat up and begin displaying a fire/melt effect.
  */
 #ifdef PIXELBLADE
-  //#define TIP_MELT
+  #define TIP_MELT
 #endif
 
 /*
@@ -225,7 +225,7 @@ const long InternalReferenceVoltage = 1062;  // Adjust this value to your board'
  * When you plug your device to USB uncomment LS_INFO !
  */
 //#define LS_LOOPLENGHT
-#define LS_SERIAL  //enable serial communication using Wire library
+//#define LS_SERIAL  //enable serial communication using Wire library
 #if defined LS_SERIAL
 //#define LS_FSM
 #define LS_INFO
